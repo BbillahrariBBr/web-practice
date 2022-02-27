@@ -13,3 +13,6 @@ console.log(arrayjs)
 // remove element frm beging
 arrayjs.shift()
 console.log(arrayjs)
+
+
+
