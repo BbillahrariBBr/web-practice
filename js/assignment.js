@@ -16,5 +16,31 @@ function woodCalculator(chair,table,bed){
 
 }
 
-var needFurniture = woodCalculator(14,5,12)
-console.log("total Wood need ", needFurniture, "Cubic feet");
+function bricCalculator(floor){
+    var totalFeet;
+    var brick;
+    if (floor <= 10){
+        totalFeet = floor * 15;
+        brick = totalFeet *1000;
+          
+    }
+    if(floor <= 20){
+        var firstTenth = 15*10;
+        var secondTenth = (floor -10) * 12;
+        totalFeet = firstTenth +secondTenth;
+        brick = totalFeet * 1000;
+
+    }
+    else{
+
+        var firstTenth = 15*10;
+        var secondTenth = 10 * 12;
+        var otherTenth = (floor -20) * 10;
+        totalFeet = firstTenth +secondTenth +otherTenth;
+        brick = totalFeet * 1000;
+    }
+    return brick;
+}
+
+var totalBrick = bricCalculator(55)
+console.log("total brickneed ", totalBrick, "pices");
