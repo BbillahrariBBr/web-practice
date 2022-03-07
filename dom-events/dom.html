@@ -26,14 +26,14 @@
         </section>
         <section>
             <h3>Another Header </h3>
-            <article>
+            <article id="article">
                 <h3>article-1</h3>
                 <p class="author">
                     author-1
                 </p>
                 <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate aliquam fugiat laboriosam eligendi numquam possimus. Optio libero quae ad animi?</p>
             </article>
-            <article>
+            <article class="special">
                 <h3>article-2</h3>
                 <p class="author">
                     author-2
@@ -63,6 +63,12 @@
             element.style.backgroundColor = 'lightblue';
             element.style.margin='10px';
         }
+    </script>
+    <script>
+        const article = document.getElementById('article');
+        const newPara = document.createElement('p');
+        newPara.innerHTML = ('This text is add by JS');
+        article.appendChild(newPara);
     </script>
 </body>
 </html>
