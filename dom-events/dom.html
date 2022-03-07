@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploring DOM Event</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            margin: 2px;
+            padding: 2px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -16,12 +24,45 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure in commodi consectetur!</p>
             
         </section>
+        <section>
+            <h3>Another Header </h3>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">
+                    author-1
+                </p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate aliquam fugiat laboriosam eligendi numquam possimus. Optio libero quae ad animi?</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">
+                    author-2
+                </p>
+                <p class="description">Cum, a totam eum ullam dicta, quod vitae natus nam voluptates assumenda debitis accusantium sequi, recusandae quaerat ab saepe consequuntur.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">
+                    author-3
+                </p>
+                <p class="description">Aliquid molestias sed unde necessitatibus quidem! Commodi, nam obcaecati quae totam, molestiae ratione voluptatem maiores, quasi praesentium cum voluptatibus harum!</p>
+            </article>
+        </section>
     </main>
     <script>
         var first = document.getElementById('first');
         first.style.color='blue';
         first.style.backgroundColor='yellow';
         first.style.fontSize='45px';
+
+        var authors = document.getElementsByClassName('author')
+        for(var i=0; i<authors.length;i++){
+            var element = authors[i];
+            console.log(element.innerHTML);
+            element.innerHTML = "Lekhok-" + i;
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin='10px';
+        }
     </script>
 </body>
 </html>
