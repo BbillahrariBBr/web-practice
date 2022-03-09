@@ -27,6 +27,7 @@
 
         document.getElementById('myList').addEventListener('click',function(){
             console.log('Click Ul list');
+            event.stopPropagation();
         });
 
         document.getElementById('container').addEventListener('click',function(){
