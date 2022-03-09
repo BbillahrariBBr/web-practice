@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Handler</title>
+</head>
+
+<main>
+    
+    <h4>Exploring Handler</h4>
+    <button id="first" onclick="changeColor()">click me-1</button>
+    <button id="second">click me-2</button>
+    <button id="third">click me-3</button>
+    <button id="last">click me-4</button>
+  
+<body>
+    
+
+    <script>
+        function changeColor() {
+            document.body.style.backgroundColor='tomato';
+            
+        }
+        function secondColor() {
+            document.body.style.backgroundColor='cyan';
+        }
+
+        function thirdColor() {
+            document.body.style.backgroundColor='blue';
+        }
+        var second = document.getElementById('second');
+        second.onclick= secondColor;
+
+        document.getElementById('third').addEventListener('click',thirdColor);
+        document.getElementById('last').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'green';
+        })
+    </script>
+</body>
+</html>
