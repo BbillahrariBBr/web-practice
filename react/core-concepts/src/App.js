@@ -5,14 +5,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit Done <code>src/App.js</code> and save to reload.
-        </p>
-       
+      <Person></Person>
+      <Person></Person>
       </header>
+      
     </div>
   );
+}
+
+function Person() {
+  return(
+    <div>
+      <h1>Name: Bakibillah</h1>
+      <h3>Software Engineer</h3>
+    </div>
+  );
+  
 }
 
 export default App;
