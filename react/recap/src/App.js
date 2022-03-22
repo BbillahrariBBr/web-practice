@@ -1,15 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const heros = [{name:'Salaman',prof:'business'},
-  {name: 'Shah Rukh', prof:'jobJibi'}, 
-  {name: 'Amir', prof:'trailor'}, {name:'Dulkar',prof:'archtech'},{name: 'Mohon Lal',prof:'killer'}]
+  const[heros,setHeros]= useState([])
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => setHeros(data))
+  },[])
+  // const heros = [{name:'Salaman',prof:'business'},
+  // {name: 'Shah Rukh', prof:'jobJibi'}, 
+  // {name: 'Amir', prof:'trailor'}, {name:'Dulkar',prof:'archtech'},{name: 'Mohon Lal',prof:'killer'}]
   return (
     <div className="App">
         {
-          heros.map(hero => <Person name= {hero.name} prof = {hero.prof}></Person>)
+          heros.map(hero => <Person name= {hero.name} key= {hero.id}></Person>)
         }
 
         <MovieCounter></MovieCounter>
@@ -18,9 +24,7 @@ function App() {
         <p>
           I Love React
         </p>
-        <Person></Person>
-        <Person></Person>
-        <Person></Person>
+  
 
        
       </header>
@@ -59,8 +63,8 @@ function Person(props){
   }
   return(
     <div style={personStyle}>
-      <h1> name :{props.name} </h1>
-      <h3>profession:{props.prof}</h3>
+      <h1> name :{props.name} </h1> 
+      <h3>profession:</h3>
     </div>
   )
 }
