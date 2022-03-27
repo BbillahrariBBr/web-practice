@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import User from './Component/UserComponent/User';
 import { useEffect, useState } from 'react';
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Team Builder</h1>
+      <h1 className='text-success'>Team Builder</h1>
       <ul>
         {team.map(m=> <li>{m}</li>)}
       </ul>

@@ -20,7 +20,7 @@ const User = (props) => {
                 <img src={picture.large} alt="" />
             </div>
             <div style={{marginLeft:'20px'}}>
-                <h1>Name: {fullName}</h1>
+                <h1 className='text-warning'>Name: {fullName}</h1>
                 <p>email: {email}</p>
                 <p><a href={website}>Learn About me</a></p>
                 <p>Phone: {mobile}</p>
