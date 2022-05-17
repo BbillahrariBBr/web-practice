@@ -22,3 +22,11 @@
   align-items: center;
   justify-content: center;
 }
+.boxItem{
+  width: .5rem;
+  height: .5rem;
+  background-color: white;
+  padding: 1rem;
+  list-style: none;
+  margin: .3rem;
+}
