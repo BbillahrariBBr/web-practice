@@ -4,5 +4,5 @@ function test()
 {
     console.log("test");
 }
-console.log(module);
+// console.log(module);
 module.exports = people;
