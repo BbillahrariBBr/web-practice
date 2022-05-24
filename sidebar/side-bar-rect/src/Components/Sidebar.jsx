@@ -1,10 +1,11 @@
 // import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import {FaHome, FaUsers,FaBars} from 'react-icons/fa';
+import {FaHome, FaUsers,FaBars, FaLock,FaMoneyBill} from 'react-icons/fa';
 import {MdMessage} from 'react-icons/md';
 import {BiAnalyse, BiSearch,BiCog} from 'react-icons/bi';
 import {AiTwotoneFileExclamation,AiFillHeart} from 'react-icons/ai';
-import {BsCartCheck} from 'react-icons/bs'
+import {BsCartCheck} from 'react-icons/bs';
+import {CgProfile} from 'react-icons/cg';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -43,6 +44,23 @@ const routes = [
         path: "/setting",
         name: "Setting",
         icon: <BiCog/>,
+        subRoutes:[
+            {
+                path: "/setting/profile",
+                name: "Profile",
+                icon: <CgProfile/>,
+            },
+            {
+                path: "/setting/2FA",
+                name: "2FA",
+                icon: <FaLock/>,
+            },
+            {
+                path: "/setting/billing",
+                name: "Billing",
+                icon: <FaMoneyBill/>,
+            },
+        ]
     },
     {
         path:"/saved",
