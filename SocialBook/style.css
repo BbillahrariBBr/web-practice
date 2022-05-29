@@ -49,8 +49,33 @@ nav{
     align-items: center;
     display: flex;
     padding: 0 15px;
+    margin-right: 5px;
 }
 
 .search-box img{
     width: 18px;
+}
+
+.search-box input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 0px;
+    padding: 10px;
+    
+}
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    background: #41db51;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
